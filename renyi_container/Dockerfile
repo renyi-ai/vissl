@@ -1,7 +1,6 @@
 ARG BASE_IMAGE
 
-# we always use cudnn version 7
-FROM BASE_IMAGE
+FROM $BASE_IMAGE
 
 # Install some basic apt packages
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && \
