@@ -5,7 +5,7 @@ FROM $BASE_IMAGE
 # Install some basic apt packages
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -qy \
-    openssh-server \
+    openssh-server && \
     apt-get clean -qq && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
